@@ -36,8 +36,9 @@ function init() {
     myPolygon.editor.startDrawing();
     const btnSend = document.getElementById('btnSend');
     btnSend.addEventListener('click', () => {
-        console.log('CLICK!!')
-        console.log(myPolygon.getCoordinates())
+        console.log('CLICK!!');
+        // console.log(myPolygon.geometry._coordPath._coordinates);
+        console.log(myPolygon.geometry.getCoordinates());
     })
 }
 
