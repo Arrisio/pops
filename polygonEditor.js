@@ -43,7 +43,7 @@ function init() {
 
         // address = $(".ymaps-2-1-72-searchbox-input__input").val()
         // radius = $("#input-area__raius").val()
-        address = radius = NaN
+        address = radius = ''
         area = myPolygon.geometry.getCoordinates()[0]
         area.pop()
         window.location = `${service_url}?address=${address}&radius=${radius}&area=${area}`;
@@ -53,7 +53,7 @@ function init() {
 
         address = $(".ymaps-2-1-72-searchbox-input__input").val()
         radius = $("#input-area__raius").val()
-        area = NaN
+        area = ''
         window.location = `${service_url}?address=${address}&radius=${radius}&area=${area}`;
     })
 }
