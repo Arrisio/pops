@@ -37,21 +37,14 @@ function init() {
     // Включаем режим редактирования с возможностью добавления новых вершин.
     myPolygon.editor.startDrawing();
 
-    const btn_area_download = document.getElementById('btn_area_download');
-    btn_area_download.addEventListener('click', () => {
-        // console.log(myPolygon.geometry._coordPath._coordinates);
-        // console.log(myPolygon.geometry.getCoordinates());
-
-        // address = $(".ymaps-2-1-72-searchbox-input__input").val()
-        // radius = $("#input-area__raius").val()
+    document.getElementById('btn_area_download').addEventListener('click', () => {
         address = radius = ''
         area = myPolygon.geometry.getCoordinates()[0]
         area.pop()
         window.location = `${service_url}?address=${address}&radius=${radius}&area=${area}`;
     })
-    const btn_radius_download = document.getElementById('btn_radius_download');
-    btn_radius_download.addEventListener('click', () => {
 
+    document.getElementById('btn_radius_download').addEventListener('click', () => {
         address = $(".ymaps-2-1-72-searchbox-input__input").val()
         radius = $("#input-area__raius").val()
         area = ''
