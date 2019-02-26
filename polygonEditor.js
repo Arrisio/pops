@@ -40,7 +40,12 @@ function init() {
     document.getElementById('btn_area_download').addEventListener('click', () => {
         address = radius = ''
         area = myPolygon.geometry.getCoordinates()[0]
-        area.pop()
+
+        if (area[0] === area[area.length - 1]) {
+            area.pop()
+        }
+        // console.log(`Selected area: ${area}`)
+
         window.location = `${service_url}?address=${address}&radius=${radius}&area=${area}`;
     })
 
