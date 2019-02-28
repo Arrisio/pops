@@ -1,6 +1,6 @@
 ymaps.ready(init);
 //service_url = 'https://databus.jet.su/calcpops'
-service_url = 'http://node163839-calcpops.jelastic.regruhosting.ru:11039/calcpops'
+service_url = 'http://138.68.77.136:5000/calcpops'
 
 function init() {
     var myMap = new ymaps.Map("map", {
